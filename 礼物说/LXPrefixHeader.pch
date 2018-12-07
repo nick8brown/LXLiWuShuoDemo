@@ -1,0 +1,101 @@
+//
+//  LXPrefixHeader.pch
+//  礼物说
+//
+//  Created by 曾令轩 on 15/11/27.
+//  Copyright © 2015年 曾令轩. All rights reserved.
+//
+
+#ifndef LXPrefixHeader_pch
+#define LXPrefixHeader_pch
+
+#define screenWIDTH [UIScreen mainScreen].bounds.size.width
+#define screenHEIGHT [UIScreen mainScreen].bounds.size.height
+#define navigationBarH 64
+#define tabBarH 49
+#define toolbarH 44
+#define loginStatus_isLogin @"isLogin"
+/*----------------------------------------礼物说----------------------------------------*/
+// 导航栏
+#define navScrollView_WIDTH self.navScrollView.frame.size.width
+#define navScrollView_HEIGHT self.navScrollView.frame.size.height
+#define maximumNumberOfNavItems 5
+#define navItem_WIDTH navScrollView_WIDTH/maximumNumberOfNavItems
+// 页面
+#define pageScrollView_WIDTH screenWIDTH
+#define pageScrollView_HEIGHT self.pageScrollView.frame.size.height
+// tableView
+#define cell_ID @"ChannelCell"
+#define WEBVIEW @"LOAD WEBVIEW"
+// tableHeaderView
+#define headerView_WIDTH self.frame.size.width
+#define ADScrollView_WIDTH self.ADScrollView.frame.size.width
+#define banners_ImgDatasURL @"http://api.liwushuo.com/v2/banners?channel=iOS"
+#define promotions_ImgDatasURL @"http://api.liwushuo.com/v2/promotions?gender=1&generation=1"
+/*----------------------------------------热门----------------------------------------*/
+#define showView_WIDTH screenWIDTH
+#define showView_HEIGHT showView_WIDTH
+#define sectionHeaderView_HEIGHT 50
+#define minimumSpacing 10
+// LXCommentFrame
+#define CommentFont_Name [UIFont systemFontOfSize:12]
+#define CommentFont_Content [UIFont systemFontOfSize:15]
+#define CommentFont_Time [UIFont systemFontOfSize:11]
+#define CommentTextColor_Name [UIColor darkGrayColor];
+#define CommentTextColor_Content [UIColor darkGrayColor];
+#define CommentTextColor_Time lineColor_LX;
+#define commentCellSpacing 10
+// Color
+#define lineColor_LX [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1]
+#define bgColor [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1]
+#define mainThemeHtmlColor [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MainColors.plist" ofType:nil]][@"TTMainTheme"]
+// Cell
+#define PopItemCell_ID @"PopItemCell"
+#define PresentCell_ID @"PresentCell"
+#define CommentCell_ID @"CommentCell"
+// URL
+#define PopItem_URL @"http://api.liwushuo.com/v2/items?gender=1&generation=1&limit=50&offset=0"
+#define ItemComment_URL @"http://api.liwushuo.com/v2/items/id/comments?limit=20&offset=0"
+/*----------------------------------------分类----------------------------------------*/
+#define collectionCell_HEIGHT 95
+#define topicScrollView_HEIGHT collectionCell_HEIGHT
+#define channelCell_WIDTH 80
+#define channelCell_HEIGHT 105
+#define categoryItem_WIDTH 100
+#define categoryItem_HEIGHT 50
+#define selectedView_WIDTH 0.3*minimumSpacing
+#define selectedView_TAG 1000
+#define giftCollectionView_WIDTH screenWIDTH-categoryItem_WIDTH
+#define subCategoryHeaderView_HEIGHT 50
+#define subCategoryCell_WIDTH 70
+#define subCategoryCell_HEIGHT 114
+// Cell
+#define CollectionCell_ID @"CollectionCell"
+#define ChannelGroupCell_ID @"ChannelGroupCell"
+#define ChannelCell_ID @"ChannelCell"
+#define GiftCell_ID @"GiftCell"
+#define SubCategoryHeaderView_ID @"SubCategoryHeaderView"
+#define SubCategoryCell_ID @"SubCategoryCell"
+#define FilterItemCell_ID @"FilterItemCell"
+// URL
+#define Collection_URL @"http://api.liwushuo.com/v2/collections?limit=6&offset=0"
+#define Channel_URL @"http://api.liwushuo.com/v2/channel_groups/all?"
+#define SubCategory_URL @"http://api.liwushuo.com/v2/item_categories/tree?"
+#define FilterChannel_URL @"http://api.liwushuo.com/v2/search/item_filter?"
+#define FilterItem_URL @"http://api.liwushuo.com/v2/search/item_by_type?limit=20&offset=%d"
+/*----------------------------------------我----------------------------------------*/
+#define profileBackground_HEIGHT 400
+#define edgeInset_Top 0.5*profileBackground_HEIGHT
+#define profileIcon_WIDTH 70
+#define profileIcon_HEIGHT profileIcon_WIDTH
+// Cell
+#define FunctionCell_ID @"FunctionCell"
+#define EmptyCell_ID @"EmptyCell"
+#define SettingCell_ID @"SettingCell"
+// IMG
+#define profileBackground_IMG @"Me_ProfileBackground"
+#define profileIcon_IMG @"avatar_default_small"
+#define favoriteGift_IMG @"icon_mine_lottery_shallow"
+#define settingItemIcon @"msg_warning"
+
+#endif /* LXPrefixHeader_pch */
